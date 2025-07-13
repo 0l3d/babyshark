@@ -99,7 +99,7 @@ void pcap_handlerp (u_char *arg, const struct pcap_pkthdr *pkthdr, const u_char 
     
   case IPPROTO_ICMP:
     icmp_header = (struct icmp*)packet_str;
-    printf("Protocol: UDP\n");
+    printf("Protocol: ICMP\n");
     printf("Source IP: %s\n Destination IP: %s\n",
 	   source_ip, 
 	   dest_ip
@@ -121,6 +121,7 @@ void pcap_handlerp (u_char *arg, const struct pcap_pkthdr *pkthdr, const u_char 
 
   default:
     printf("unrecognized protocol");
+    total_packets++;
     break;
     
   } 
@@ -134,7 +135,7 @@ int main (int argc, char *argv[]) {
   int packet_count = 0;
   char *filter_text = "";
   int opt;
-  char *dev_name;
+  char *dev_name = NULL;
 
   while((opt = getopt(argc, argv, "hd:t:e:")) != -1) {
     switch (opt) {
@@ -184,7 +185,7 @@ int main (int argc, char *argv[]) {
     }
 
   
-  handler = pcap_open_live (dev->name, BUFSIZ, 0, 1000, errbuf);
+  handler = pcap_open_live (dev->name, BUFSIZ, 1, 1000, errbuf);
   if (!handler) {
     if (dev) {
 	pcap_freealldevs (dev);
