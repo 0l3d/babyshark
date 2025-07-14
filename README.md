@@ -1,13 +1,13 @@
-# 🦈 BABYSHARK
+# BABYSHARK
 
 Minimal, Simple and Fast packet sniffer in 🇨.
 
-## 👍 Features
+## Features
 - Choose a specific interface: `babyshark -d <name>`  
 - Limit the number of packages to capture: `babyshark -t <count>`  
 - Use **libpcap** limit expressions: `babyshark -e <expressions>`   
 
-## 🗒️ Usage
+## Usage
 ```bash
 git clone https://github.com/0l3d/babyshark.git
 cd babyshark/
@@ -16,12 +16,12 @@ make
 Usage: babyshark [-h] [-d device/interface] [-t packet count] [-e expression]
 ```
 
-## ⚠️ Expression Syntax
+## Expression Syntax
 For more info on filter expression syntax, visit:  
 `https://www.tcpdump.org/manpages/pcap-filter.7.html`  
 
-## 📝 LICENSE
+## LICENSE
 This project is licensed under the **GPL-3.0 License**.
 
-## 👨‍💻 Author
+## Author
 Created by 0l3d.
