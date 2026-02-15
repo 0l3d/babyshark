@@ -9,7 +9,7 @@ Minimal, Simple and Fast packet sniffer in 🇨.
 
 ## Usage
 ```bash
-git clone https://github.com/0l3d/babyshark.git
+git clone https://git.sr.ht/~oled/babyshark
 cd babyshark/
 make
 ./babyshark -h
@@ -24,4 +24,4 @@ For more info on filter expression syntax, visit:
 This project is licensed under the **GPL-3.0 License**.
 
 ## Author
-Created by 0l3d.
+Created by oled.
